@@ -16,7 +16,7 @@ function validate() {
   var email = document.querySelectorAll('[name="email"]')[0].value;
   var email_confimration = document.querySelectorAll('[name="email-confirmation"]')[0].value;
   var password = document.querySelectorAll('[name="password"]')[0].value;
-
+  var age = document.querySelectorAll('[name="age"]')[0].value;
   var gender = document.querySelector("input[name='gender']:checked");
   var interests = document.querySelectorAll("input[name='interest[]']:checked");
   
@@ -40,12 +40,14 @@ function validate() {
 
   if (password === "") {
     errors.push("password is required");
-  } else if (!isValidEmail(password)) {
-    errors.push("Invalid password format");
-  }
+  } 
   
   if (!gender) {
     errors.push("Gender is required");
+  }
+
+  if (!age) {
+    errors.push("Age is required");
   }
   
   if (interests.length === 0) {

@@ -65,6 +65,12 @@
       $gender = check_input($_POST["gender"]);
     }
 
+    if (empty($_POST["age"])) {
+      $ageErr = "Age is required";
+    } else {
+      $age = check_input($_POST["gender"]);
+    }
+
     // Some fields may be left empty such as website and comment
     $website = check_input($_POST["website"]);
     // Check if URL address syntax is valid
